@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
 import './styles.scss';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Typewriter from 'typewriter-effect';
+import Resume from '../../assets/pdf/Samar-Alkhalil-Resume.pdf';
 import Navbar from '../Navbar';
 import SocialMedia from '../SocialMedia';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -45,9 +47,9 @@ function Header({
               <a href="#contact_page">
                 <button type="button" className="btn primary-btn">Hire Me</button>
               </a>
-              <a href="../../assets/Samar-Alkhalil-Resume.pdf" download>
+              <Link to={Resume} target="_blank" download>
                 <button type="button" className="btn highlighted-btn">Get Resume</button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="profile-picture">

@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dotenv = require('dotenv-flow').config( {
   path: path.join(paths.root)
 });
+const FileLoader = require('file-loader');
 
 module.exports = {
   entry: [
@@ -76,6 +77,17 @@ module.exports = {
         generator: {
           filename: 'fonts/[hash][ext][query]'
         }
+      },
+      {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/pdf/[name].[ext]',
+            },
+          },
+        ],
       },
     ],
   },
