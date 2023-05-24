@@ -1,0 +1,194 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.my_skills {
+  display: flex;
+  justify-content: center;
+  padding: 43px 0 0 0;
+
+  h2 {
+    color: #000;
+    font-size: 4em;
+    width: 90% !important;
+    margin: 0px !important;
+    text-align: center !important;
+    span {
+      color: vars.$primary-color;
+    }
+  
+  }
+  &.skills-dark {
+    background-color: #000;
+    h2 {
+      color: vars.$item-color;
+    }
+    
+  }
+
+  
+}
+
+.my_skills,
+.section_container_skills_gif,
+.container_s {
+  background-color: vars.$item-color;
+  
+}
+
+.my_skills 
+#my_skill {
+  background: #b0bec5;
+}
+
+.section_container_skills_gif {
+  width: 100%;
+  flex-direction: column;
+  padding: 19px 0;
+  &.dark-mode {
+    background-color: black;
+    .skills_gif_container div {
+      background-color: #28a4e2;
+      color: white;
+    }
+  }
+  
+}
+.skills_gif_container {
+  width: 90%;
+  gap: 12px;
+}
+.section_container_skills_gif,
+.skills_gif_container div,
+.skills_gif_container img,
+.skill_box,
+.content_img_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.skills_gif_container div {
+  border-radius: 40px;
+  height: 82px;
+  flex-wrap: wrap;
+  width: 64%;
+  background-color: rgba(107, 164, 221, 0.07);
+  font-weight: 500;
+  color: #000;  
+}
+.skills_gif_container img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container_s {
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0;
+
+  &.container-dark {
+    background-color: #000;
+    color: vars.$item-color;
+  }
+}
+.skill_box {
+  border: none;
+  gap: 0.5rem;
+  width: 200px;
+  flex-direction: column;
+  margin: 9px;
+  transition: ease-in-out 0.2s;
+}
+.skill_box:hover {
+  border-radius: 12px;
+}
+.skill_box:active {
+  transform: scale(0.9);
+}
+
+.svg_blobs {
+  position: relative;
+  z-index: 1;
+  top: 269px;
+  width: 100%;
+  height: 400px;
+}
+.content_img_container img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.content_img_container {
+  flex-direction: column;
+  gap: 10px;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: rgba(107, 164, 221, 0.07);
+}
+.content_img_container h3 {
+  font-size: 24px;
+}
+@media screen and (min-width: vars.$large-breakpoint) {
+  .skills_gif_container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+  }
+  .skills_gif_container div {
+    padding: 9px;
+    font-size: 18px;
+    text-align: center;
+    height: 109px;
+  }
+  .skills_gif_container img {
+    width: 900px;
+    height: 500px !important;
+  }
+}
+
+@media screen and (max-width: vars.$large-breakpoint) {
+  .skills_gif_container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 30px 0;
+    width: 100%;
+  }
+  .skills_gif_container div {
+    padding: 32px;
+    font-size: 18px;
+    text-align: center;
+    height: 109px;
+  }
+}
+
+@media screen and (max-width: vars.$medium-breakpoint) {
+  .my_skills {
+    margin: 0;
+    padding: 15px 0;
+  }
+  .skills_gif_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+  }
+  .skills_gif_container div {
+    width: 90%;
+    padding: 74px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: vars.$small-breakpoint) {
+  .skills_gif_container div {
+    height: 106px;
+    padding: 26px;
+  }
+  .skill_box {
+    width: 150px;
+    height: 150px;
+  }
+}

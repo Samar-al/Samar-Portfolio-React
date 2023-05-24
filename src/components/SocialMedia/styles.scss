@@ -1,0 +1,16 @@
+@use 'src/styles/vars';
+
+div {
+  .colz-icon {
+    display: flex;
+    margin-top: 2em;
+    a {
+      margin: 6px;
+      color: vars.$item-color;
+      padding: 8px;
+      font-size: 20px;
+      color: vars.$item-color;
+    
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$primary-color;
+  width: 100%;
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    .logo {
+      width: 13%;
+      border-radius: 10px;
+    }
+  }
+
+  &.navbar--dark {
+    background-color: color.scale(vars.$primary-color, $lightness: -60%);
+
+    .navbar__items.open {
+      background-color: color.scale(vars.$primary-color, $lightness: -60%);
+    }
+  }
+  .menu-btn {
+    background-color: vars.$complementary-color;
+    border: 1px solid vars.$item-color;
+    color: vars.$item-color;
+    padding: 5px;
+    border-radius: 70px;
+    margin: 0 1rem;
+    display: inline-block;
+    min-width: 12em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: color.scale(vars.$complementary-color, $lightness: -10%);
+      border: 0;
+    }
+  } 
+
+  &__items {
+    display: flex;
+    transition: all 0.25s linear 0s;
+    a {
+      margin-right: 1rem;
+      color: vars.$item-color;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: vars.$complementary-color;
+      }
+      &.navlink--active {
+        text-decoration: underline;
+      }
+
+    }
+  }
+  
+  &__burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.6em 0;
+    align-items: flex-end;
+
+    &-line {
+      width: 20px;
+      height: 2px;
+      background-color: vars.$item-color;
+      margin: 4px;
+      transition: transform 0.3s;
+
+      &.open {
+        transform: perspective(800px) rotateY(45deg);
+      }
+    }
+  }
+
+  @media (max-width: vars.$medium-breakpoint) {
+    &__items {
+      display: none;
+      animation: menuItemsFadeIn 0.5s ease-in-out forwards;
+      &.open {
+        z-index: 1;
+        display: flex; /* Show the menu items when the 'open' class is present */
+        flex-direction: column; /* Align the menu items vertically */
+        align-items: center; /* Center the menu items horizontally */
+        background-color: vars.$primary-color; /* Same background color as the navbar */
+        position: absolute; /* Position the menu items absolutely */
+        top: 3em;
+        left: 0;
+        width: 100%;
+        padding: 1rem; /* Add padding for spacing */
+        margin-top: 1px;
+        opacity: 1;
+        border-bottom: 1px solid vars.$item-color;
+       
+      }
+      
+
+      a {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__burger {
+      display: flex;
+    }
+
+    @keyframes menuItemsFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px); /* Adjust the initial position if needed */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+@media screen and (max-width: vars.$small-breakpoint){
+  .navbar__logo .logo{
+    width: 25%;
+  }
+}

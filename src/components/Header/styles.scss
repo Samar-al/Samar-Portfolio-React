@@ -1,0 +1,291 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.photo-cover {
+  
+  .profil-container {
+    box-sizing: border-box;
+    display: flex;
+    width: auto;
+    
+    .profil-parent {
+      width: 100%;
+      display: flex;
+      padding: 10em;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-start;
+      background-color: vars.$primary-color;
+      flex-direction: row;
+      position: sticky;
+    
+      &.profil--dark {
+        background-color: color.scale(vars.$primary-color, $lightness: -60%);
+      }
+
+      .profil-description {
+        width: 50%;
+
+        &-name {
+          font-size: 30px;
+          line-height: 40px;
+
+          p {
+            font-size: 54px;
+            line-height: 54px;
+            text-align: left;
+            color: transparent;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: vars.$monochromatic-color;
+
+            .highlighted-text {
+              color: vars.$item-color;
+              text-shadow: 0 0 9px #1d1122;
+              margin-right: 9px;
+              margin-left: 12px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .profile-details-role {
+          display: flex;
+          flex-direction: column;
+          margin: 15px 0 18px 0;
+
+          .primary-text {
+            color: (--white);
+            font-size: 24px;
+            width: 90%;
+
+            h1 {
+              font-size: 24px;
+              line-height: 32px;
+              margin: 0 0 6px 0;
+              color: #e3b6e3;
+              display: flex;
+              gap: 6px;
+              text-shadow: 0 0 2px vars.$primary-color-shadow;
+
+              span {
+                color: vars.$monochromatic-color;
+              }
+            }
+
+            .profile-role-tagline {
+              font-size: 16px;
+              line-height: 24px;
+              text-align: justify;
+              margin: 5px 0 0 0;
+              color: vars.$item-color;
+              text-shadow: 0 0 9px vars.$primary-color-shadow;
+            }
+          }
+
+          .colz {
+            padding: 12px 0px;
+          }
+        }
+
+        .profile-options {
+          display: flex;
+          margin: 0 0 0 28px;
+          background-color: vars.$primary-color;
+          color: #111;
+
+          &.profile-options-dark {
+            background-color: color.scale(vars.$primary-color, $lightness: -60%);
+          }
+
+          a {
+            .btn {
+              border-radius: 50px;
+              padding: 14px 0;
+              width: 160px;
+              cursor: pointer;
+              transition: 0.2s;
+              outline: none;
+              border: none;
+
+              &:active {
+                transform: translateY(2px);
+              }
+            }
+
+            .primary-btn {
+              border: 2px solid vars.$item-color;
+              font-size: 12px;
+              background-color: vars.$primary-color;
+              color: vars.$item-color;
+
+              &:hover {
+                color: aliceblue;
+                border: 2px solid #3b80ff;
+                background-color: #1f2235;
+              }
+            }
+
+            .highlighted-btn {
+              margin: 0 0 0 28px;
+              color: vars.$item-color;
+              font-size: 12px;
+              background-color: #3b80ff;
+
+              &:hover {
+                margin: 0 0 0 28px;
+                background-color: cornsilk;
+                color: #111;
+              }
+            }
+          }
+        }
+      }
+
+      .profile-picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 3px 0px 0px vars.$item-color;
+        height: 23em;
+        width: 23em;
+        border-radius: 50%;
+
+        &-background {
+          height: 90%;
+          width: 90%;
+          background-image: url(../../assets/img/samar-photo.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          clip-path: polygon(
+            34% 0%,
+            81% 3%,
+            99% 37%,
+            94% 80%,
+            61% 100%,
+            19% 92%,
+            5% 74%,
+            0% 46%,
+            7% 15%
+          );
+
+          &:hover {
+            transform: scale(1.07);
+            transition: 1s ease-out;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+
+@media screen and (max-width: vars.$large-breakpoint) {
+  
+  .photo-cover .profil-container .profil-parent {
+    width:  auto;
+    padding: 3em;
+
+    .profil-description {
+      width: 60%;
+      margin-right: 2em;
+
+      .profile-details-role {
+        .primary-text {
+          h1 {
+            flex-direction: column;
+            span {
+              height: 3em;
+            }
+          }
+        }
+        .colz-icon {
+          justify-content: center;
+        }
+      }
+
+      .profile-options {
+        justify-content: center;
+      }
+
+    }
+    .profile-picture {
+      width: 15em;
+      height: 15em;
+    }
+
+  }
+} 
+@media screen and (max-width: vars.$medium-breakpoint) {
+  
+  .photo-cover .profil-container .profil-parent {
+    width:  auto;
+    padding: 1.5em;
+    flex-direction: column-reverse;
+
+    .profil-description {
+      width: 60%;
+      margin-top: 2em;
+
+      .profile-details-role {
+        .primary-text {
+          h1 {
+            flex-direction: column;
+            span {
+              height: 3em;
+            }
+          }
+        }
+      }
+
+      .profile-options {
+        justify-content: center;
+      }
+
+    }
+    .profile-picture {
+      width: 15em;
+      height: 15em;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: vars.$small-breakpoint) {
+  
+  .photo-cover .profil-container .profil-parent {
+    width:  auto;
+    padding: 0;
+    flex-direction: column-reverse;
+
+    .profil-description {
+      width: 60%;
+      margin-top: 2em;
+
+      .profile-details-role {
+        .primary-text {
+          h1 {
+            flex-direction: column;
+            span {
+              height: 3em;
+            }
+          }
+        }
+      }
+
+      .profile-options {
+        justify-content: center;
+        margin-bottom: 1em;;
+      }
+
+    }
+    .profile-picture {
+      width: 15em;
+      height: 15em;
+    }
+
+  }
+}

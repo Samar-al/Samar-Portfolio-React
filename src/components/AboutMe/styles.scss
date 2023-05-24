@@ -1,0 +1,161 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.about_me {
+  width: 100%;
+  background: vars.$item-color;
+  
+  &.aboutMe-dark {
+    background-color: #000;
+  }
+
+  &,
+  .container_01,
+  .my_img,
+  .my_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .container_01 {
+    width: 100%;
+    padding: 60px 0;
+  }
+
+  .my_img {
+    width: 45%;
+    margin: 67px 0 35px 15px;
+
+    img {
+      display: flex;
+      width: 35em;
+      border-radius: 80px;
+      filter: blur(1px);
+    }
+  }
+
+  .my_info h2 {
+    margin: 0 !important;
+  }
+
+  h2 {
+    margin: 10px;
+    font-size: 42px;
+
+    span {
+      color: vars.$primary-color;
+    }
+  }
+
+  .my_info {
+    width: 80%;
+    color: #000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 35px;
+    font-family: system-ui;
+
+    &.myInfo-dark {
+      color: vars.$item-color;
+      article {
+        color: vars.$item-color;
+      }
+    }
+
+    article {
+      width: 90%;
+      margin: 3px;
+      font-size: 18px;
+      color: #000;
+      padding: 2px 15px 20px 15px;
+      text-align: justify;
+    }
+
+  
+  }
+
+  
+
+  @media screen and (min-width: vars.$large-breakpoint) {
+    .my_info {
+      gap: 27px;
+    }
+
+    .my_info article {
+      font-size: 21px;
+    }
+
+    .my_img {
+      width: 45%;
+
+      img {
+        width: 567px;
+      }
+    }
+  }
+
+  @media screen and (max-width: vars.$large-breakpoint) {
+    .my_info {
+      gap: 27px;
+    }
+
+    .my_info article {
+      font-size: 21px;
+    }
+
+    .my_img {
+      width: 45%;
+
+      img {
+        width: 22em;
+      }
+    }
+  }
+  
+
+  @media screen and (max-width: vars.$medium-breakpoint) {
+    .container_01 {
+      flex-direction: column;
+      .my_img img {
+        width: 400px;
+      }
+    }
+    
+  }
+
+  @media screen and (max-width: 580px) {
+    .my_img {
+      width: 70%;
+      margin: 35px 0 5px 0 !important;
+    }
+  }
+
+  @media screen and (max-width: vars.$small-breakpoint) {
+    .container_01 {
+      width: 100%;
+      flex-direction: column;
+      position: relative;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    .my_img img {
+      width: 100%;
+    }
+
+    .my_info {
+      width: 90%;
+
+      h2 {
+        margin: 10px;
+      }
+
+      article {
+        width: 100%;
+      }
+    }
+
+  }
+}
