@@ -15,7 +15,6 @@ function About({ isDark }) {
             About <span>Me</span>
           </h2>
           <article>
-            <p>I have a preference for the back-end, but I am equally capable in the front-end and always ready to learn new technologies.</p>
             <p>After eight years of successful experience in the optical industry, I decided to devote myself to a world that I have long been passionate about.</p>
             <p>I started self-training in order to make a career change.</p>
             <p>I then joined the <a href="https://oclock.io/">Ecole O'clock</a>, which has the Grande école du Numérique label, to become a full stack developer with a specialisation in the symfony framework.

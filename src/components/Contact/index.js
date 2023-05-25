@@ -82,7 +82,7 @@ const Contact = ({ isDark }) => {
   return (
     <section className={`contact_page_section ${isDark ? 'dark-mode' : ''}`} id="contact_page">
       <div className="contact_section">
-        <div className="contact_container">
+        <div className={`contact_container ${isDark ? 'dark-mode' : ''}`}>
           <div className={`form_container_left ${isDark ? 'dark-mode' : ''}`}>
             <div className="user_form">
               <ToastContainer />

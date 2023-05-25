@@ -38,6 +38,11 @@
 .user_message_form,
 .your_info_data {
   width: 100%;
+
+  &.dark-mode {
+    background-color: #000000;
+  }
+  
 }
 
 .form_container_right {
@@ -119,7 +124,7 @@ input {
 .form_container_left {
   width: 50%;
   &.dark-mode {
-    background-color: black;
+    
     color: white;
   }
  
