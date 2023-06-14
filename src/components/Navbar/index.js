@@ -27,7 +27,7 @@ const Navbar = ({ navData, isDark, togglerIsDark }) => {
         onClick={() => {
           togglerIsDark();
         }}
-      >{ isDark ? 'Désactiver' : 'Activer'} le mode dark
+      >{ isDark ? 'Deactivate' : 'Activate'} Dark mode
       </button>
       <div className={`navbar__items ${isMenuOpen ? 'open' : ''}`}>
         {
