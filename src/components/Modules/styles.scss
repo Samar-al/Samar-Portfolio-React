@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+.modules_section {
+  h3{
+    padding: 0.5rem;
+    background-color: vars.$primary-color;
+    color: white;  
+  }
+  .modules_project {
+    max-width: 70%;
+    margin: 1rem auto;
+    
+    .modules_card{
+
+      background-color: color.scale(vars.$primary-color, $lightness: 60%);
+      .module_imageList {
+        margin: 1rem auto;
+      }
+      &.dark-mode {
+        background-color: color.scale(vars.$primary-color, $lightness: -40%);
+      }
+    }
+
+  }
+  &.dark-mode{
+    background-color: color.scale(vars.$primary-color, $lightness: -60%);
+  }  
+}

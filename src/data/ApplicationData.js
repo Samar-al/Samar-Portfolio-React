@@ -14,6 +14,7 @@ import apiRest from '../assets/img/logo/logo_folder/rest-api-icon.png';
 import symfony from '../assets/img/logo/logo_folder/symfony.png';
 import slackLogo from '../assets/img/logo/logo_folder/Slack_RGB.png';
 import twigLogo from '../assets/img/logo/logo_folder/twig-logo.png';
+import prestashopLogo from '../assets/img/logo/logo_folder/prestashop.svg.png';
 
 const mySkillsData = [
   {
@@ -96,6 +97,11 @@ const mySkillsData = [
     id: 16,
     skill_name: 'Git VSC',
     img_link: gitVscLogo,
+  },
+  {
+    id: 17,
+    skill_name: 'Prestashop',
+    img_link: prestashopLogo,
   },
 ];
 export default mySkillsData;

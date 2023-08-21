@@ -33,7 +33,7 @@ const Navbar = ({ navData, isDark, togglerIsDark }) => {
         {
           navData.map((category) => (
             <NavLink
-              to={`#${category.route}`}
+              to={`/#${category.route}`}
               className={({ isActive }) => (isActive ? 'navlink--active' : 'navlink')}
               key={category.label}
               onClick={() => {
