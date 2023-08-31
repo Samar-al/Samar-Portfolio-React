@@ -16,9 +16,14 @@
       background-color: color.scale(vars.$primary-color, $lightness: 60%);
       .module_imageList {
         margin: 1rem auto;
+        
       }
+        
       &.dark-mode {
         background-color: color.scale(vars.$primary-color, $lightness: -40%);
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
       }
     }
 
@@ -27,3 +32,4 @@
     background-color: color.scale(vars.$primary-color, $lightness: -60%);
   }  
 }
+    

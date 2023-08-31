@@ -21,7 +21,12 @@ const Modules = ({ isDark, ModulesData }) => (
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
               Prestashop Module
             </Typography>
-            <ImageList className="module_imageList" sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+            <ImageList
+              className="module_imageList"
+              sx={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}
+              cols={3}
+              rowHeight={164}
+            >
               {data.img.map((item) => (
                 <ImageListItem key={item} style={{ border: '1px solid #e0e0e0' }}>
                   <img
@@ -33,7 +38,7 @@ const Modules = ({ isDark, ModulesData }) => (
                 </ImageListItem>
               ))}
             </ImageList>
-            <Typography sx={{ mb: 1.5 }} color="text.primary" style={{ fontWeight: 'bold' }}>
+            <Typography sx={{ mb: 1.5 }} color="text.primary" style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
               {data.title}
             </Typography>
             <Typography variant="body2" style={{ textAlign: 'justify', margin: '0 auto', maxWidth: '600px' }}>

@@ -141,6 +141,7 @@ const ModulesData = [
         - Handpick a Google font for a distinctive touch.
         - Fine-tune button colors.
         - Specify a redirection destination when visitors click the "underaged" option.
+        
       Moreover, should a user select "underaged," they are seamlessly redirected to a page chosen by the merchant. If they attempt to return to the website, they encounter the same alluring yet restrictively blurred page, prompting them to confirm their age once more.
     `,
   },
