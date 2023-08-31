@@ -47,8 +47,8 @@ function Header({
               <a href="#contact_page">
                 <button type="button" className="btn primary-btn">Hire Me</button>
               </a>
-              <Link to={Resume} target="_blank" download>
-                <button type="button" className="btn highlighted-btn">Get Resume</button>
+              <Link>
+                <button type="button" className="btn highlighted-btn" onClick={() => window.open(Resume, '_blank')}>Open Resume</button>
               </Link>
             </div>
           </div>

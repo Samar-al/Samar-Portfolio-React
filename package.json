@@ -67,7 +67,8 @@
   },
   "jest": {
     "modulePaths": [
-      "./"
+      "./",
+      "./modules"
     ],
     "roots": [
       "<rootDir>/src",
