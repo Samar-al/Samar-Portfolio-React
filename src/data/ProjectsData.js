@@ -9,6 +9,7 @@ import ageVerification from '../assets/img/img-proj/homepage_verification.png';
 import icons from '../assets/img/img-proj/product_icons.png';
 import ageRestriction from '../assets/img/img-proj/homepage_restriction.png';
 import tchatPlus from '../assets/img/img-proj/online_front_tchat.png';
+import ibx from '../assets/img/img-proj/ibxtechnology.png';
 
 const projData = [
   {
@@ -98,6 +99,14 @@ const projData = [
     project_image: tchatPlus,
     proj_code_like: 'https://github.com/Samar-al/tchatplus',
     proj_live_link: '/modules#TchatPlus',
+  },
+  {
+    id: 12,
+    project_name: 'IBX Technology',
+    proj_creation_date: 'oct 2023',
+    project_image: ibx,
+    proj_code_like: '/ibx',
+    proj_live_link: 'https://www.ibxtechnology.com',
   },
 
 ];

@@ -15,6 +15,14 @@ import symfony from '../assets/img/logo/logo_folder/symfony.png';
 import slackLogo from '../assets/img/logo/logo_folder/Slack_RGB.png';
 import twigLogo from '../assets/img/logo/logo_folder/twig-logo.png';
 import prestashopLogo from '../assets/img/logo/logo_folder/prestashop.svg.png';
+import JavaLogo from '../assets/img/logo/logo_folder/Java_Logo.svg';
+import hibernate from '../assets/img/logo/logo_folder/hibernate-icon.svg';
+import JavaSE from '../assets/img/logo/logo_folder/JavaSE.png';
+import JavaEE from '../assets/img/logo/logo_folder/javaEE.png';
+import spring from '../assets/img/logo/logo_folder/spring-3.svg';
+import sqlServer from '../assets/img/logo/logo_folder/Microsoft-SQL-Server.svg';
+import intellij from '../assets/img/logo/logo_folder/IntelliJ-IDEA.svg';
+import eclipse from '../assets/img/logo/logo_folder/EClipse.svg';
 
 const mySkillsData = [
   {
@@ -103,5 +111,46 @@ const mySkillsData = [
     skill_name: 'Prestashop',
     img_link: prestashopLogo,
   },
+  {
+    id: 18,
+    skill_name: 'Java',
+    img_link: JavaLogo,
+  },
+  {
+    id: 19,
+    skill_name: 'Hibernate',
+    img_link: hibernate,
+  },
+  {
+    id: 20,
+    skill_name: 'Java SE',
+    img_link: JavaSE,
+  },
+  {
+    id: 21,
+    skill_name: 'Java EE',
+    img_link: JavaEE,
+  },
+  {
+    id: 22,
+    skill_name: 'Spring',
+    img_link: spring,
+  },
+  {
+    id: 23,
+    skill_name: 'SQL Server',
+    img_link: sqlServer,
+  },
+  {
+    id: 24,
+    skill_name: 'Intellij',
+    img_link: intellij,
+  },
+  {
+    id: 25,
+    skill_name: 'Eclipse',
+    img_link: eclipse,
+  },
+
 ];
 export default mySkillsData;

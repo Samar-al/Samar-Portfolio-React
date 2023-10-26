@@ -5,15 +5,27 @@ function Skills({ skillsData, isDark }) {
   const mySkillDescription = [
     {
       index: 1,
-      info: '⚡ Building responsive website front end and back-end using Symfony and Twig',
+      info: '⚡ Building responsive website front end and back-end using Symfony and Twig with MVC architecture',
     },
     {
       index: 2,
-      info: '⚡ Creating back-end web application in PHP with API REST endPoints end front-ends with React',
+      info: '⚡ Creating back-end web application in PHP with API REST endPoints and front-ends with React',
     },
     {
       index: 3,
       info: '⚡ Manage MySql databases with native PHP, Symfony or Laravel',
+    },
+    {
+      index: 4,
+      info: '⚡ Create websites with React Gatsby with GraphQL database and deploy on netlify',
+    },
+    {
+      index: 5,
+      info: '⚡ I\'m well-acquainted with both Agile Scrum and UML methodolgies, having succesfully incorporated them into my projects',
+    },
+    {
+      index: 6,
+      info: '⚡ Building projects in Java using Java EE with MVC',
     },
   ];
   return (

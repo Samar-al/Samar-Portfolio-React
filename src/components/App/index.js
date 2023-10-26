@@ -13,6 +13,7 @@ import ModulesData from '../../data/ModulesData';
 import './styles.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 import Portfolio from '../Portfolio';
+import Ibx from '../Ibx';
 
 function App() {
   const [isDark, setIsDark] = useState(false); // 1
@@ -53,6 +54,24 @@ function App() {
               <Modules
                 isDark={isDark}
                 ModulesData={ModulesData}
+              />
+              <Contact isDark={isDark} />
+            </>
+          )}
+        />
+
+        <Route
+          path="/ibx"
+          element={(
+            <>
+              <Header
+                navData={navData}
+                socialMediaData={socialMedia}
+                isDark={isDark}
+                togglerIsDark={togglerIsDark}
+              />
+              <Ibx
+                isDark={isDark}
               />
               <Contact isDark={isDark} />
             </>

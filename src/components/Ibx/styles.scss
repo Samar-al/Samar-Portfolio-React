@@ -1,0 +1,58 @@
+@use 'sass:color';
+@use 'src/styles/vars';
+
+
+.modules_section {
+  background-color: vars.$primary-color;
+  h3{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: white;  
+  }
+  &.dark-mode{
+    h3{
+
+      background-color: color.scale(vars.$primary-color, $lightness: -60%);
+    }
+  }  
+}
+.modules_section2 {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  background-color: vars.$primary-color;
+  .article {
+    h3 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-family: 'Alliance',Arial,sans-serif;
+      color: #001746;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: color.scale(vars.$primary-color, $lightness: 80%);
+    max-width: 80%;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    p {
+      padding: 1rem;
+    }
+    &.dark-mode {
+      background-color: color.scale(vars.$primary-color, $lightness: -40%);
+      color: #F4F5F6;;
+      h3{
+        color: #F4F5F6;;
+      }
+    }
+   
+  }
+  &.dark-mode {
+    background-color: color.scale(vars.$primary-color, $lightness: -60%);
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
