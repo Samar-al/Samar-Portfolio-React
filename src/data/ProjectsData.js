@@ -9,7 +9,7 @@ import ageVerification from '../assets/img/img-proj/homepage_verification.png';
 import icons from '../assets/img/img-proj/product_icons.png';
 import ageRestriction from '../assets/img/img-proj/homepage_restriction.png';
 import tchatPlus from '../assets/img/img-proj/online_front_tchat.png';
-import ibx from '../assets/img/img-proj/ibxtechnology.png';
+import ibx from '../assets/img/img-proj/ibxtechnology.jpeg';
 
 const projData = [
   {
