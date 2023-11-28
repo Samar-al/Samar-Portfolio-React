@@ -18,7 +18,7 @@ function Header({
         <div className={`profil-parent ${isDark ? 'profil--dark' : ''}`}>
           <div className="profil-description">
             <div className="profil-description-name">
-              <p>Hello, I'm <span className="highlighted-text">Samar Al khalil</span></p>
+              <p>Hello, I'm <span className="highlighted-text">Sam Chebaye</span></p>
             </div>
             <div className="profile-details-role">
               <span className="primary-text">
